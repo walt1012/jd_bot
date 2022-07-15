@@ -25,7 +25,7 @@ async function changeFile () {
 
 async function sendNotify (text,desp) {
   const options ={
-    uri:  `https://sctapi.ftqq.com/${serverJ}.send`,
+    uri:  `https://api.day.app/${serverJ}`,
     form: { text, desp },
     json: true,
     method: 'POST'
