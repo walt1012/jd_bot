@@ -25,15 +25,15 @@ async function changeFile () {
 
 async function sendNotify (text,desp) {
   const options ={
-    url: 'https://api.day.app/push',
+    uri: 'https://api.day.app/push',
     headers: {
         "content-type":"application/json",
         "charset": "utf-8"
     },
-    body: {
-        "title": text,
-        "body": desp,
-        "device_key": serverJ
+    formData: {
+        title: text,
+        body: desp,
+        device_key: serverJ
     },
     json: true,
     method: 'POST'
